@@ -1,0 +1,20 @@
+.recent-posts-title {
+    @include title-format-mobile;
+    @media (min-width: 769px) {
+        @include title-format-not-mobile;
+    }
+    color: #4E4E4E;
+    margin: 0;
+    padding-bottom: 24px;
+}
+
+.recent-posts-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-posts-items__wrapper {
+    display: grid;
+    grid-template-columns: 160px 383px;
+    grid-column-gap: 21px;
+}

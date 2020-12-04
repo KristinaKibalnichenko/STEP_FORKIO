@@ -1,0 +1,25 @@
+*,
+::after,
+::before{
+    box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.page-container {
+    margin: 0 auto;
+    font-family: $font-stack;
+    min-width: 320px;
+    background-color: $primary-bg-color;
+}
+
