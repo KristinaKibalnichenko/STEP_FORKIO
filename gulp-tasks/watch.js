@@ -14,7 +14,6 @@ const watchTask = () => {
 	watch("./src/styles/**/*.scss", styles);
 	watch("./src/js/**/*.js", scripts);
 	watch("./src/img/**/*.{jpg,png,svg,gif,ico,webp}", imgs);
-	// watch("./src/fonts/*.ttf", fonts);
 };
 
 exports.watch = watchTask;
