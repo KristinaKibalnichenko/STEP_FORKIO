@@ -1,20 +1,3 @@
-.container {
-  margin: 0 auto;
-  min-width: 320px;
-  width: calc(100% - 20px);
-  padding: 0 10px;
-  @media (min-width: 769px) {
-    min-width: 769px;
-    width: calc(100% - 30px);
-    padding: 0 15px;
-  }
-  @media (min-width: 1200px) {
-    min-width: 1200px;
-    width: calc(100% - 30px);
-    padding: 0 15px;
-  }
-}
-
 .navigation {
   position: relative;
 }
@@ -116,12 +99,13 @@
     right: 0;
     width: 182px;
     background-color: #F5F5F5;
-    justify-content: end;
+    justify-content: flex-end;
   }
 
   .nav-menu.nav-menu--active .nav-menu__item {
     &:hover {
       background: #E5E5E5;
+      cursor: pointer;
     }
   }
 }

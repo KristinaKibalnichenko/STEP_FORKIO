@@ -1,23 +1,17 @@
 const { src, dest } = require("gulp");
 const { browsersync } = require("./serv");
-const fileinclude = require("gulp-file-include");
+const concat = require('gulp-concat');
 const rename = require("gulp-rename");
-var sourcemaps = require('gulp-sourcemaps');
-let uglify = require('gulp-uglify-es').default;
+const uglify = require('gulp-uglify-es').default;
 
 const scripts = () =>
-	src("./src/js/script.js")
-		.pipe(sourcemaps.init())
-		.pipe(fileinclude({
-			prefix: "@@",
-			basepath: "@file"
-		}))
+	src("./src/js/*.js")
+		.pipe(concat("script.js"))
 		.pipe(dest("./dist/js/"))
 		.pipe(uglify())
 		.pipe(rename({
 			extname: ".min.js"
 		}))
-		.pipe(sourcemaps.write("./maps"))
 		.pipe(dest("./dist/js/"))
 		.pipe(browsersync.reload({ stream: true }));
 

@@ -23,3 +23,15 @@ a {
     background-color: $primary-bg-color;
 }
 
+.container {
+    margin: 0 auto;
+    min-width: 320px;
+    max-width: 1220px;
+    padding: 0 10px;
+    // @media (min-width: 481px) {
+    //   min-width: 481px;
+    // }
+    // @media (min-width: 1200px) {
+    //   min-width: 1170px;
+    // }
+  }
