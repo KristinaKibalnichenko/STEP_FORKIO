@@ -1,8 +1,9 @@
 .idea/
 
+.dist/
+
+index.html
+
 package-lock.json
-src/header.html
-src/js/header.js
-src/styles/_header.scss
 
 node_modules

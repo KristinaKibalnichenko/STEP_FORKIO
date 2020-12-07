@@ -18,8 +18,8 @@
 //     text-transform: uppercase;
 // }
 
-// @mixin transform($property) {
-//     -webkit-transform: $property;
-//     -ms-transform: $property;
-//     transform: $property;
-//   }
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
