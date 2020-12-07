@@ -5,9 +5,13 @@
           box-sizing: border-box;
 }
 
-ul[class],
 ol[class] {
   margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul[class] {
   padding: 0;
   list-style: none;
 }
@@ -44,6 +48,7 @@ a {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 1;
 }
 
 .nav-wrapper {
@@ -68,11 +73,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 0 27.5px 6px;
-}
-
-.img__hover {
-  display: none;
+  padding-left: 6px;
 }
 
 .logo__text {
@@ -85,6 +86,22 @@ a {
   padding-left: 17px;
 }
 
+.img__hover {
+  display: none;
+}
+
+.logo:hover .img__original {
+  display: none;
+}
+
+.logo:hover .img__hover {
+  display: block;
+}
+
+.logo:hover .logo__text {
+  color: #FFFFFF;
+}
+
 .nav-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,27 +112,37 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #8D81AC;
+  background-color: #8D81AC;
   border-radius: 40px;
   padding: 11px 0;
   width: 119px;
+  margin: 34px 0 32px;
 }
 
 .nav-btn__text {
   font-weight: bold;
   font-size: 15px;
+  line-height: 15px;
   color: #FFFFFF;
+}
+
+.nav-btn:hover {
+  background-color: #FFFFFF;
+}
+
+.nav-btn:hover .nav-btn__text {
+  color: #8D81AC;
 }
 
 .nav-burger {
   float: right;
-  width: 26px;
+  width: 31px;
   height: 26px;
   background-color: inherit;
   border: none;
   outline: none;
   padding: 0;
-  margin-right: 5px;
+  padding-right: 5px;
   cursor: pointer;
 }
 
@@ -158,9 +185,10 @@ a {
 
 .nav-menu {
   display: none;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  margin: 0;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -168,45 +196,223 @@ a {
 
 .nav-menu__item {
   font-weight: bold;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 26px;
+  line-height: 38px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #8D81AC;
-  padding-right: 47.5px;
-}
-
-.nav-menu__item:hover {
-  color: #57A4A4;
+  color: #FFFFFF;
+  padding-right: 35px;
 }
 
 .intro {
   width: 100%;
-  margin-top: -103px;
-  background-image: url(../img/intro-bg.webp);
-  background-size: cover;
-  background-position: center;
+  background-image: url(../img/intro-bg.png);
+  background-size: center;
+  background-position: top;
   background-repeat: no-repeat;
+}
+
+.intro__title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.intro__content {
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #8D81AC;
+  margin: 0;
+}
+
+.intro__version {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #848E97;
+  padding: 19px 0 394px;
+}
+
+.btn-download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  background-color: #8D81AC;
+  border-radius: 40px;
+  padding: 13px 0;
+  width: 290px;
+}
+
+.btn-download__text {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: #FFFFFF;
 }
 
 @media (min-width: 481px) {
   .logo {
-    padding: 20px 0 20px 10px;
+    padding-left: 10px;
   }
 
   .logo__text {
     display: block;
   }
 
+  .nav-btn {
+    width: 145px;
+    margin: 24px 10px 23px 0;
+  }
+
+  .nav-btn__text {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
   .nav-burger {
     display: none;
+  }
+
+  .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .nav-menu__item {
+    font-size: 13px;
+    line-height: 13px;
+    padding: 1.5px 18px 19.5px 18px;
+    color: #8D81AC;
+  }
+
+  .nav-menu__item:hover {
+    color: #FFFFFF;
+  }
+
+  .intro__title {
+    padding: 187px 0 19px;
+    font-size: 72px;
+    line-height: 72px;
+  }
+
+  .intro__content {
+    font-size: 24px;
+  }
+
+  .intro__version {
+    padding: 19px 0 406px;
+  }
+
+  .btn-download {
+    width: 390px;
+    padding: 19.5px 0;
+  }
+
+  .btn-download__text {
+    font-size: 21px;
+    line-height: 23px;
+  }
+}
+
+@media (min-width: 707px) {
+  .intro__version {
+    padding: 19px 0 432px;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-menu__item {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 0 23.5px 18px 23.5px;
   }
 }
 
 @media (min-width: 993px) {
+  .nav {
+    background-color: transparent;
+  }
+
   .logo {
-    padding: 27.5px 0 0px 80px;
+    padding-left: 30px;
+  }
+
+  .nav-btn {
+    margin: 31px 30px 31px 0;
+  }
+
+  .nav-menu {
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    margin-right: 175px;
+    margin-top: -56px;
+  }
+
+  .nav-menu__item {
+    padding-right: 48px;
+    padding: 0 48px 18px 0;
+  }
+
+  .intro__title {
+    padding: 183px 0 19px;
+    font-size: 82px;
+    line-height: 82px;
+  }
+
+  .intro__content {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .intro__version {
+    font-size: 16px;
+    line-height: 16px;
+    padding: 19px 0 420px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    left: calc((100vw - 1220px) / 2);
+  }
+
+  .logo {
+    padding-left: 80px;
+  }
+
+  .nav-btn {
+    margin-right: 80px;
+  }
+
+  .nav-menu {
+    margin-right: 225px;
   }
 }
 
@@ -267,5 +473,9 @@ a {
   .nav-menu.nav-menu--active .nav-menu__item:hover {
     background: #E5E5E5;
     cursor: pointer;
+  }
+
+  .intro__title {
+    padding: 176px 0 19px;
   }
 }
