@@ -8,15 +8,15 @@ const imgs = () =>
         .pipe(webp({
             quality: 70
         }))
-        .pipe(dest("./dist/img/"))
-        .pipe(src("./src/img/**/*.{jpg,png,svg,gif,ico,webp}"))
+        // .pipe(dest("./dist/img/"))
+        // .pipe(src("./src/img/**/*.{jpg,png,svg,gif,ico,webp}"))
         .pipe(imagemin({
             interlaced: true,
             progressive: true,
             optimizationLevel: 4,
             svgoPlugins: [{ removeViewBox: false }]
         }))
-        .pipe(dest("./dist/img/")) 
+        .pipe(dest("./dist/img/"))
         .pipe(browsersync.reload({ stream: true }));
 
 exports.imgs = imgs;
