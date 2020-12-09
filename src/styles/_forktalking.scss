@@ -15,7 +15,7 @@
 .forktalking__title {
     font-weight: bold;
     font-size: 36px;
-    line-height: 48px;
+    line-height: 41px;
     text-align: center;
     color: $primary-color;
     padding: 57px 0 53px;
@@ -24,20 +24,78 @@
 
 .brand {
     @include flex-center;
+    flex-wrap: wrap;
+    @media (min-width: 481px) and (max-width: 992px) {
+        justify-content: space-between;
+    }
+    @media (min-width: 993px) {
+        justify-content: space-around;
+    }
 }
 
 .brand-wrapper {
-    @include flex-center;
-    flex-direction: column;
-    max-width: 345px;
+    display: grid;
+    grid-template-rows: 65px 1fr;
+    justify-items: center;
+    padding-bottom: 45px;
+    max-width: 354px;
+    &:last-child {
+        padding-bottom: 0;
+    }
+    @media (min-width: 481px) {
+        width: calc((100vw - 7px*4) / 2);
+    }
+    @media (min-width: 993px) {
+        width: calc((100vw - 10px*6) / 3);
+    }
+}
+
+.brand__text {
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21.5px;
+    text-align: center;
+    color: $primary-color;
+    margin: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media (min-width: 481px) {
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand__text--1 {
+        padding-top: 11px;
+    }
+
+    .brand__text--2 {
+        padding-top: 14px;
+    }
+
+    .brand__text--3 {
+        padding-top: 21px;
+    }
+
+    .brand__text--4,
+    .brand__text--5 {
+        margin-top: -8px;
+    }
 }
 
 .forktalking__content {
+    max-width: 887px;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     line-height: 21px;
     text-align: center;
     color: #A291A5;
-    padding: 37px 0 15px;
+    padding: 37px 25px 15px;
     margin: 0;
+    @media (min-width: 481px) {
+        padding: 37px 0 15px;
+    }
 }
