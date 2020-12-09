@@ -5,8 +5,8 @@ const serv = () => {
 		server: {
 			baseDir: "./", 
 		},
-		// browser: "firefox", 
-		browser: "chrome",
+		browser: "firefox", 
+		// browser: "chrome",
 	});
 };
 

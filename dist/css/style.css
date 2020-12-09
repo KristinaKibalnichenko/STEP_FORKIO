@@ -293,7 +293,7 @@ a {
 .forktalking__title {
   font-weight: bold;
   font-size: 36px;
-  line-height: 48px;
+  line-height: 41px;
   text-align: center;
   color: #FFFFFF;
   padding: 57px 0 53px;
@@ -310,32 +310,43 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .brand-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 345px;
+  display: grid;
+  grid-template-rows: 65px 1fr;
+  justify-items: center;
+  padding-bottom: 45px;
+  max-width: 354px;
+}
+
+.brand-wrapper:last-child {
+  padding-bottom: 0;
+}
+
+.brand__text {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21.5px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .forktalking__content {
+  max-width: 887px;
   font-family: 'Lato', sans-serif;
   font-size: 14px;
   line-height: 21px;
   text-align: center;
   color: #A291A5;
-  padding: 37px 0 15px;
+  padding: 37px 25px 15px;
   margin: 0;
 }
 
@@ -409,6 +420,19 @@ a {
   .forktalking {
     background-image: url(../img/forktalking-bg-m.webp);
   }
+
+  .brand-wrapper {
+    width: calc((100vw - 7px*4) / 2);
+  }
+
+  .brand__text {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .forktalking__content {
+    padding: 37px 0 15px;
+  }
 }
 
 @media (min-width: 707px) {
@@ -470,6 +494,15 @@ a {
 
   .forktalking {
     background-image: url(../img/forktalking-bg-l.webp);
+  }
+
+  .brand {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .brand-wrapper {
+    width: calc((100vw - 10px*6) / 3);
   }
 }
 
@@ -566,5 +599,13 @@ a {
 
   .intro__title {
     padding: 176px 0 19px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .brand {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
