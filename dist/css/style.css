@@ -25,13 +25,15 @@ a {
   margin: 0 auto;
   font-family: "Montserrat", sans-serif;
   min-width: 320px;
+  width: 100%;
   background-color: #F4F4F4;
 }
 
 .container {
   margin: 0 auto;
   min-width: 320px;
-  max-width: 1220px;
+  width: 100%;
+  max-width: 1200px;
   padding: 0 10px;
 }
 
@@ -186,9 +188,9 @@ a {
 .nav-menu {
   display: none;
   margin: 0;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -207,7 +209,7 @@ a {
 
 .intro {
   width: 100%;
-  background-image: url(../img/intro-bg.png);
+  background-image: url(../img/intro-bg.webp);
   background-size: center;
   background-position: top;
   background-repeat: no-repeat;
@@ -270,6 +272,71 @@ a {
   font-size: 18px;
   line-height: 20px;
   color: #FFFFFF;
+}
+
+.btn-download:hover {
+  background-color: #FFFFFF;
+}
+
+.btn-download:hover .btn-download__text {
+  color: #8D81AC;
+}
+
+.forktalking {
+  width: 100%;
+  background-image: url(../img/forktalking-bg-s.webp);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.forktalking__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 57px 0 53px;
+  margin: 0;
+}
+
+.brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.brand-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 345px;
+}
+
+.forktalking__content {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  color: #A291A5;
+  padding: 37px 0 15px;
+  margin: 0;
 }
 
 @media (min-width: 481px) {
@@ -338,6 +405,10 @@ a {
     font-size: 21px;
     line-height: 23px;
   }
+
+  .forktalking {
+    background-image: url(../img/forktalking-bg-m.webp);
+  }
 }
 
 @media (min-width: 707px) {
@@ -368,9 +439,9 @@ a {
   }
 
   .nav-menu {
-    -webkit-box-pack: right;
-        -ms-flex-pack: right;
-            justify-content: right;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     margin-right: 175px;
     margin-top: -56px;
   }
@@ -395,6 +466,24 @@ a {
     font-size: 16px;
     line-height: 16px;
     padding: 19px 0 420px;
+  }
+
+  .forktalking {
+    background-image: url(../img/forktalking-bg-l.webp);
+  }
+}
+
+@media (min-width: 1100px) {
+  .logo {
+    padding-left: 55px;
+  }
+
+  .nav-btn {
+    margin: 31px 55px 31px 0;
+  }
+
+  .nav-menu {
+    margin-right: 200px;
   }
 }
 

@@ -30,6 +30,9 @@
   @media (min-width: 993px) {
     padding-left: 30px;
   }
+  @media (min-width: 1100px) {
+    padding-left: 55px;
+  }
   @media (min-width: 1200px) {
     padding-left: 80px;
   }
@@ -76,6 +79,9 @@
   }
   @media (min-width: 993px) {
     margin: 31px 30px 31px 0;
+  }
+  @media (min-width: 1100px) {
+    margin: 31px 55px 31px 0;
   }
   @media (min-width: 1200px) {
     margin-right: 80px;
@@ -144,16 +150,19 @@
 .nav-menu {
   display: none;
   margin: 0;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
   @media (min-width: 481px) {
     display: flex;
     justify-content: center;
   }
   @media (min-width: 993px) {
-    justify-content: right;
+    justify-content: flex-end;
     margin-right: 175px;
     margin-top: -56px;
+  }
+  @media (min-width: 1100px) {
+    margin-right: 200px;
   }
   @media (min-width: 1200px) {
     margin-right: 225px;
