@@ -25,12 +25,14 @@ a {
     margin: 0 auto;
     font-family: $font-stack;
     min-width: 320px;
+    width: 100%;
     background-color: $primary-bg-color;
 }
 
 .container {
     margin: 0 auto;
     min-width: 320px;
-    max-width: 1220px;
+    width: 100%;
+    max-width: 1200px;
     padding: 0 10px;
 }

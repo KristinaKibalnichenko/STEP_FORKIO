@@ -1,0 +1,43 @@
+.forktalking {
+    width: 100%;
+    background-image: url(../img/forktalking-bg-s.webp);
+    background-size: cover; 
+    background-position: top;
+    background-repeat: no-repeat;
+    @media (min-width: 481px) {
+        background-image: url(../img/forktalking-bg-m.webp);
+    }
+    @media (min-width: 993px) {
+        background-image: url(../img/forktalking-bg-l.webp);
+    }
+}
+
+.forktalking__title {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    color: $primary-color;
+    padding: 57px 0 53px;
+    margin: 0;
+}
+
+.brand {
+    @include flex-center;
+}
+
+.brand-wrapper {
+    @include flex-center;
+    flex-direction: column;
+    max-width: 345px;
+}
+
+.forktalking__content {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    color: #A291A5;
+    padding: 37px 0 15px;
+    margin: 0;
+}

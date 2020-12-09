@@ -6,7 +6,6 @@ btn.addEventListener("click", function(e) {
     btn.classList.toggle('nav-burger--active');
     menu.classList.toggle('nav-menu--active');
     menuItems.classList.toggle('nav-menu--active');
-    
 });
 
 
