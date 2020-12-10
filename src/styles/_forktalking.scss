@@ -10,26 +10,54 @@
     @media (min-width: 993px) {
         background-image: url(../img/forktalking-bg-l.webp);
     }
-}
-
-.forktalking__title {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 41px;
-    text-align: center;
-    color: $primary-color;
-    padding: 57px 0 53px;
-    margin: 0;
-}
-
-.brand {
-    @include flex-center;
-    flex-wrap: wrap;
-    @media (min-width: 481px) and (max-width: 992px) {
-        justify-content: space-between;
+    &__title {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 41px;
+        text-align: center;
+        color: $primary-color;
+        padding: 57px 0 53px;
+        margin: 0 auto;
+        @media (min-width: 481px) {
+            padding: 87px 0 88px;
+            font-size: 42px;
+            line-height: 44px;
+        }
+        @media (min-width: 993px) {
+            padding: 108px 0 82px;
+            font-size: 48px;
+            line-height: 50px;
+        }
     }
-    @media (min-width: 993px) {
-        justify-content: space-around;
+    &__brands {
+        display: grid;
+        flex-wrap: wrap;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        @media (min-width: 481px) {
+            grid-template-columns: 47% 47%;
+            justify-content: space-between;
+        }
+        @media (min-width: 993px) {
+            grid-template-columns: 28% 28% 28%;
+            justify-content: space-around;
+        }
+    }
+    &__content {
+        max-width: 887px;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        color: #A291A5;
+        padding: 37px 25px 15px;
+        margin: 0 auto;
+        @media (min-width: 481px) {
+            padding: 22px 20px 11.5px;
+        }
+        @media (min-width: 481px) {
+            padding: 7px 20px 3.5px;
+        }
     }
 }
 
@@ -42,11 +70,15 @@
     &:last-child {
         padding-bottom: 0;
     }
-    @media (min-width: 481px) {
-        width: calc((100vw - 7px*4) / 2);
-    }
     @media (min-width: 993px) {
-        width: calc((100vw - 10px*6) / 3);
+        padding-bottom: 111px;
+    }
+}
+
+@media (min-width: 481px) {
+    .brand__img {
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -58,12 +90,11 @@
     line-height: 21.5px;
     text-align: center;
     color: $primary-color;
-    margin: 0;
+    margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
     @media (min-width: 481px) {
-        padding-left: 7px;
-        padding-right: 7px;
+        padding: 25px 7px 0;
     }
 }
 
@@ -81,21 +112,7 @@
     }
 
     .brand__text--4,
-    .brand__text--5 {
+    .brand__text--6 {
         margin-top: -8px;
-    }
-}
-
-.forktalking__content {
-    max-width: 887px;
-    font-family: 'Lato', sans-serif;
-    font-size: 14px;
-    line-height: 21px;
-    text-align: center;
-    color: #A291A5;
-    padding: 37px 25px 15px;
-    margin: 0;
-    @media (min-width: 481px) {
-        padding: 37px 0 15px;
     }
 }

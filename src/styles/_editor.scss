@@ -1,6 +1,6 @@
 .editor {
   text-align: center;
-  background-color: $editor-bg-color;
+  background-color: $primary-bg-color;
 }
 
 .editor-title {
@@ -72,15 +72,15 @@
   }
 }
 
-.advantage__title:before {
-  content: "\3C";
-}
-.advantage__title:after {
-  content: "\3E";
-}
+// .advantage__title:before {
+//   content: "\3C";
+// }
+// .advantage__title:after {
+//   content: "\3E";
+// }
 
-.advantage-post {
-}
+// .advantage-post {
+// }
 .advantage-post__item {
   display: flex;
   flex-direction: column;

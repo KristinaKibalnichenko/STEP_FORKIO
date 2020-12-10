@@ -70,6 +70,7 @@
   @include flex-center;
   background-color: $nav-color;
   border-radius: 40px;
+  border: 1px solid #8D81AC;
   padding: 11px 0;
   width: 119px;
   margin: 34px 0 32px;
@@ -159,13 +160,16 @@
   @media (min-width: 993px) {
     justify-content: flex-end;
     margin-right: 175px;
+    margin-left: 195px;
     margin-top: -56px;
   }
   @media (min-width: 1100px) {
     margin-right: 200px;
+    margin-left: 220px;
   }
   @media (min-width: 1200px) {
     margin-right: 225px;
+    margin-left: 245px;
   }
   &__item {
     font-weight: bold;

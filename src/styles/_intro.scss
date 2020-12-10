@@ -1,7 +1,8 @@
 .intro {
+    position: relative;
     width: 100%;
     background-image: url(../img/intro-bg.webp);
-    background-size: center; 
+    background-size: cover; 
     background-position: top;
     background-repeat: no-repeat;
     &__title {
@@ -12,7 +13,7 @@
         color: $primary-color;
         margin: 0;
         @media (max-width: 480px) {
-            padding: 176px 0 19px;
+            padding: 154px 0 19px;
         }
         @media (min-width: 481px) {
             padding: 187px 0 19px;
@@ -20,7 +21,7 @@
             line-height: 72px;
         }
         @media (min-width: 993px) {
-            padding: 183px 0 19px;
+            padding: 175px 0 19px;
             font-size: 82px;
             line-height: 82px;
         }
@@ -30,9 +31,29 @@
         line-height: 26px;
         text-align: center;
         color: $nav-color;
-        margin: 0;
+        margin: 0 auto;
         @media (min-width: 481px) {
             font-size: 24px;
+        }
+        @media (min-width: 993px) {
+            font-size: 30px;
+            line-height: 30px;
+        }
+    }
+    &__content--mobile {
+        margin: 0 auto;
+        @media (min-width: 481px) {
+            display: none;
+        }
+    }
+    &__content--not-mobile {
+        display: none;
+        @media (min-width: 481px) {
+            display: block;
+            margin: 0 auto;
+            font-family: 'Lato', sans-serif;
+            font-size: 24px;
+            line-height: 24px;
         }
         @media (min-width: 993px) {
             font-size: 30px;
@@ -61,29 +82,58 @@
     }
 }
 
-.btn-download {
+.intro-footer {
     @include flex-center;
-    margin: 0 auto;
-    background-color: $nav-color;
-    border-radius: 40px;
-    padding: 13px 0;
-    width: 290px;
-    @media (min-width: 481px) {
-        width: 390px;
-        padding: 19.5px 0;
-    }
-    &__text {
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 20px;
-        color: $primary-color;
+    position: absolute;
+    flex-direction: column;
+    bottom: -49.5px;
+    left: calc((100vw - 290px) / 2);
+    &__btn-download {
+        @include flex-center;
+        margin: 0 auto;
+        background-color: $nav-color;
+        border-radius: 40px;
+        border: 1px solid #8D81AC;
+        padding: 13px 0;
+        width: 290px;
         @media (min-width: 481px) {
-        font-size: 21px;
-        line-height: 23px;
+            width: 390px;
+            padding: 19.5px 0;
+        }
+        &:hover {
+            background-color: $primary-color;
         }
     }
-    &:hover {
-        background-color: $primary-color;
+    &__description {
+        @include flex-center;
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        color: #848E97;
+        padding-top: 12.5px;
+        @media (min-width: 481px) {
+            line-height: 16px;
+            padding-top: 18.5px;
+        }
+        @media (min-width: 993px) {
+            line-height: 15px;
+            padding-top: 19px;
+        }
+    }
+    @media (min-width: 481px) {
+        bottom: -65.5px;
+        left: calc((100vw - 390px) / 2);
+    }
+}
+
+.btn-download__text {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: $primary-color;
+    @media (min-width: 481px) {
+    font-size: 21px;
+    line-height: 23px;
     }
 }
 
