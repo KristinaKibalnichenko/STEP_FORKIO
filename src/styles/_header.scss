@@ -70,7 +70,7 @@
   @include flex-center;
   background-color: $nav-color;
   border-radius: 40px;
-  border: 1px solid #8D81AC;
+  border: 1px solid $nav-color;
   padding: 11px 0;
   width: 119px;
   margin: 34px 0 32px;
@@ -82,7 +82,7 @@
     margin: 31px 30px 31px 0;
   }
   @media (min-width: 1100px) {
-    margin: 31px 55px 31px 0;
+    margin-right: 55px;
   }
   @media (min-width: 1200px) {
     margin-right: 80px;
@@ -150,9 +150,12 @@
 
 .nav-menu {
   display: none;
-  margin: 0;
+  margin: 0 auto;
   justify-content: flex-start;
   align-items: center;
+  @media (max-width: 480px) {
+    background-color: #333333;
+  }
   @media (min-width: 481px) {
     display: flex;
     justify-content: center;
@@ -172,12 +175,10 @@
     margin-left: 245px;
   }
   &__item {
-    font-weight: bold;
     font-size: 26px;
     line-height: 38px;
-    align-items: center;
+    text-align: left;
     color: $primary-color;
-    padding-right: 35px; 
     @media (min-width: 481px) {
       font-size: 13px;
       line-height: 13px;
@@ -227,16 +228,71 @@
     flex-direction: column;
     position: absolute;
     top: 103px;
-    right: 0;
-    width: 182px;
-    background-color: #F5F5F5;
-    justify-content: flex-end;
+    left: 10px;
+    width: calc(100vw - 20px);
+    background-color: #333333;
+    align-items: flex-start;
   }
 
   .nav-menu.nav-menu--active .nav-menu__item {
+    width: 100%;
+    padding: 29px 0 21px 35px;
+    border-bottom: 3px solid #3B3B3B;
     &:hover {
-      background: #E5E5E5;
+      color: $nav-color;
       cursor: pointer;
     }
+    &:active {
+      color: $nav-color;
+      cursor: pointer;
+    }
+    &:focus {
+      color: $nav-color;
+      cursor: pointer;
+    }
+  }
+
+  .nav-menu__item {
+    position: relative;
+  }
+
+  .nav-menu.nav-menu--active .nav-menu__item:hover::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 8px;
+    height: 53px;
+    background-color: $nav-color;
+  }
+
+  .nav-menu.nav-menu--active .nav-menu__item:active::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 8px;
+    height: 53px;
+    background-color: $nav-color;
+  }
+
+  .nav-menu.nav-menu--active .nav-menu__item:focus::before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 0;
+    width: 8px;
+    height: 53px;
+    background-color: $nav-color;
+  }
+
+  .nav-menu.nav-menu--active .nav-menu__item:last-child::after {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background-color: #333333;
   }
 }
