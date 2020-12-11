@@ -32,8 +32,20 @@
     font-size: 21px;
     line-height: 32px;
   }
-  @media (min-width: 993px) {
-    padding: 0 135px 13px 135px;
+  &__text {
+    // font-family: $font-editor;
+    line-height: 20px;
+    font-weight: 400;
+    color: #323232;
+    padding: 0 11px 36px 3px;
+    @media (min-width: 481px) {
+      padding: 0 40px 24px 39px;
+      font-size: 21px;
+      line-height: 32px;
+    }
+    @media (min-width: 993px) {
+      padding: 0 135px 13px 135px;
+    }
   }
 }
 .buttons {
@@ -41,35 +53,49 @@
   font-size: 12px;
   font-weight: bold;
   color: #323232;
+  @media (min-width: 993px) {
+    margin-bottom: 70px;
+  }
 }
 .button {
   border: 1px solid #c9c5c5;
   border-radius: 3px;
   padding: 5px 7px 5px;
   margin-right: 6px;
+  &__icon {
+    padding-top: 3px;
+  }
 }
 
-.button__icon {
-  padding-top: 3px;
-}
-.button__second {
-  padding-left: 6px;
-}
-.advantage__title {
-  font-size: 32px;
-  line-height: 38px;
-  font-weight: bold;
-  color: $nav-color;
-  padding: 42px 0 47px 0;
-  @media (min-width: 481px) {
-    font-size: 42px;
-    line-height: 44px;
-    padding-left: 66px;
-  }
+.advantage {
   @media (min-width: 993px) {
-    font-size: 48px;
-    line-height: 50px;
+    background-color: $primary-color;
+    display: flex;
+    // margin-top: 70px;
   }
+  &__title {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: bold;
+    color: $nav-color;
+    padding: 42px 15px 47px;
+    @media (min-width: 481px) {
+      font-size: 42px;
+      line-height: 44px;
+    }
+    @media (min-width: 993px) {
+      font-size: 48px;
+      line-height: 50px;
+      order: 5;
+    }
+  }
+  &__title:before {
+    content: "\3C";
+  }
+  &__title:after {
+    content: "\3E";
+  }
+<<<<<<< HEAD:src/styles/_editor.scss
 }
 
 // .advantage__title:before {
@@ -81,6 +107,13 @@
 
 // .advantage-post {
 // }
+=======
+
+  &-post {
+    margin: 0 15px 0 14px;
+  }
+}
+>>>>>>> vika-local:src/styles/editor.scss
 .advantage-post__item {
   display: flex;
   flex-direction: column;
@@ -88,29 +121,31 @@
   @media (min-width: 481px) {
     flex-direction: row;
   }
-}
-.advantage-post__item:last-child {
-  position: relative;
-}
-
-.post {
-  @media (min-width: 481px) {
-    display: block;
-    flex-direction: row;
-    // margin-left: 15px;
-    // margin-right: 26.5px;
+  &:last-child {
+    position: relative;
+    @media (min-width: 993px) {
+    }
   }
 }
-
-.post__title {
-  font-size: 16px;
-  font-weight: 16px;
-  margin-top: 27px;
-  color: #323232;
+.post__block {
+  @media (min-width: 481px) {
+    min-width: 130px;
+  }
 }
-
-.post__content {
-  margin-top: 14px;
-  line-height: 21px;
-  color: #848e97;
+.post {
+  padding-top: 24px;
+  @media (min-width: 481px) {
+    padding: 0 14px 0 20px;
+    text-align: left;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 16px;
+    color: #323232;
+  }
+  &__content {
+    margin-top: 14px;
+    line-height: 21px;
+    color: #848e97;
+  }
 }
