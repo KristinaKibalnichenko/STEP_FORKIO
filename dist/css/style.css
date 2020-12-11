@@ -287,7 +287,7 @@ a {
   background-color: #ffffff;
 }
 
-.editor-title {
+.editor__title {
   text-align: center;
   font-size: 26px;
   font-weight: bold;
@@ -296,12 +296,11 @@ a {
   padding-top: 79.5px;
 }
 
-.editor-text {
+.editor__text {
   line-height: 20px;
   font-weight: 400;
   color: #323232;
-  margin-left: -5px;
-  margin-bottom: 36px;
+  padding: 0 11px 36px 3px;
 }
 
 .buttons {
@@ -322,16 +321,12 @@ a {
   padding-top: 3px;
 }
 
-.button__second {
-  padding-left: 6px;
-}
-
 .advantage__title {
   font-size: 32px;
   line-height: 38px;
   font-weight: bold;
   color: #8d81ac;
-  padding: 42px 0 47px 0;
+  padding: 42px 15px 47px;
 }
 
 .advantage__title:before {
@@ -340,6 +335,10 @@ a {
 
 .advantage__title:after {
   content: "\3E";
+}
+
+.advantage-post {
+  margin: 0 15px 0 14px;
 }
 
 .advantage-post__item {
@@ -357,10 +356,13 @@ a {
   position: relative;
 }
 
+.post {
+  padding-top: 24px;
+}
+
 .post__title {
   font-size: 16px;
   font-weight: 16px;
-  margin-top: 27px;
   color: #323232;
 }
 
@@ -425,6 +427,67 @@ a {
   color: #A291A5;
   padding: 37px 0 15px;
   margin: 0;
+}
+
+.forkpricing {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.0001);
+}
+
+.forkpricing__title {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.offers-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+}
+
+.offers-block__title {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 0 36px;
+}
+
+.offers-block__price {
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 62px;
+  margin: 30px 0 20px;
+}
+
+.offers-block__period {
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 38px;
+  position: relative;
+}
+
+.offers-block__content {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.offers-block__content:before {
+  content: "";
+  text-align: center;
+  position: absolute;
+  width: 60px;
+  border-bottom: 5px solid #8d81ac;
+  margin: 0 auto;
 }
 
 @media (min-width: 481px) {
@@ -494,13 +557,12 @@ a {
     line-height: 23px;
   }
 
-  .editor-title {
+  .editor__title {
     font-size: 42px;
     line-height: 42px;
   }
 
-  .editor-text {
-    min-width: 689px;
+  .editor__text {
     padding: 0 40px 24px 39px;
     font-size: 21px;
     line-height: 32px;
@@ -509,7 +571,6 @@ a {
   .advantage__title {
     font-size: 42px;
     line-height: 44px;
-    padding-left: 66px;
   }
 
   .advantage-post__item {
@@ -519,14 +580,13 @@ a {
             flex-direction: row;
   }
 
+  .post__block {
+    min-width: 130px;
+  }
+
   .post {
-    display: block;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-left: 15px;
-    margin-right: 26.5px;
+    padding: 0 14px 0 20px;
+    text-align: left;
   }
 
   .forktalking {
@@ -591,18 +651,32 @@ a {
     padding: 19px 0 420px;
   }
 
-  .editor-title {
+  .editor__title {
     font-size: 54px;
     line-height: 54px;
   }
 
-  .editor-text {
+  .editor__text {
     padding: 0 135px 13px 135px;
+  }
+
+  .buttons {
+    margin-bottom: 70px;
+  }
+
+  .advantage {
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .advantage__title {
     font-size: 48px;
     line-height: 50px;
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
   }
 
   .forktalking {
