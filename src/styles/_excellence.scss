@@ -1,0 +1,117 @@
+.advantage {
+    background-color: $primary-color;
+    @media (min-width: 993px) {
+        // display: flex;
+        // flex-direction: row;
+        background-color: #F4F4F4;
+    }
+    &__title {
+        font-size: 32px;
+        line-height: 35px;
+        font-weight: bold;
+        color: $nav-color;
+        text-align: center;
+        padding: 32px 0 36px;
+        margin: 0 auto;
+        @media (min-width: 481px) {
+        font-size: 42px;
+        line-height: 42px;
+        padding: 62px 0 50px;
+        }
+        @media (min-width: 993px) {
+        font-size: 48px;
+        // flex-grow: 0.5;
+        // float: left;
+        }
+    }
+    &__title::before {
+        content: "\3C";
+    }
+    &__title::after {
+        content: "\3E";
+    }
+    &__post {
+        margin: 0;
+        // @media (min-width: 993px) {
+        //     flex-grow: 0.5;
+            order: -1;
+        //     float: left;
+        // }
+    }
+}
+
+.adv-wrapper {
+    @media (min-width: 993px) {
+        display: flex;
+        // flex-direction: row;
+        // flex-wrap: wrap;
+    }
+}
+
+.advantage-post__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @media (min-width: 481px) {
+        flex-direction: row;
+        padding: 0 20px 60px 20px;
+    }
+}
+
+.post__img {
+    display: flex;
+    @media (min-width: 481px) {
+        min-width: 131px;
+        padding-right: 23px;
+    }
+}
+
+.p-text {
+    padding: 25px 10px 40px;
+    @media (min-width: 481px) {
+        padding: 0;
+    }
+}
+
+.p-text__title {
+    font-weight: normal;
+    font-size: 16px;
+    font-weight: 16px;
+    color: #323232;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 14px;
+    @media (min-width: 481px) {
+        padding-bottom: 16px;
+    }
+}
+
+.p-text__content {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #848E97;
+    margin: 0;
+    @media (min-width: 481px) {
+        text-align: left;
+    }
+}
+
+.big__img {
+    margin-right: -10px;
+    display: flex;
+    justify-content: flex-end;
+    object-fit: contain;
+    padding-top: 24px;
+    @media (min-width: 481px) {
+        padding-top: 16px;
+    }
+    // @media (min-width: 993px) {
+    //     float: left;
+    // }
+}
+
+.big__img img {
+    max-width: 100%;
+}
