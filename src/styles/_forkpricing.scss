@@ -1,0 +1,54 @@
+.forkpricing {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.0001);
+  &__title {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 42px;
+    text-align: center;
+    color: $primary-color;
+  }
+}
+
+.offers {
+}
+
+.offers-block {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: $primary-color;
+  &__title {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 0 36px;
+  }
+  &__price {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 62px;
+    margin: 30px 0 20px;
+  }
+  &__period {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+    position: relative;
+  }
+
+  &__content {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.offers-block__content:before {
+  content: "";
+  text-align: center;
+  position: absolute;
+  width: 60px;
+  border-bottom: 5px solid $nav-color;
+  margin: 0 auto;
+}
