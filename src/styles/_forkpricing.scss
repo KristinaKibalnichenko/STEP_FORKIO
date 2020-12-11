@@ -1,6 +1,6 @@
 .forkpricing {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.0001);
+  background-color: #4a3b4e;
   &__title {
     font-weight: bold;
     font-size: 28px;
@@ -43,7 +43,6 @@
     line-height: 16px;
   }
 }
-
 .offers-block__content:before {
   content: "";
   text-align: center;
@@ -51,4 +50,35 @@
   width: 60px;
   border-bottom: 5px solid $nav-color;
   margin: 0 auto;
+}
+
+.offers-block__btn {
+  opacity: 0.15;
+  border-radius: 40px;
+  border: 1px solid #8d81ac;
+  padding: 11px 0;
+  width: 163px;
+  margin: 47px 0 47px;
+
+  // @media (min-width: 481px) {
+  //   width: 145px;
+  //   margin: 24px 10px 23px 0;
+  // }
+  // @media (min-width: 993px) {
+  //   margin: 31px 30px 31px 0;
+  // }
+  // @media (min-width: 1100px) {
+  //   margin: 31px 55px 31px 0;
+  // }
+  // @media (min-width: 1200px) {
+  //   margin-right: 80px;
+  // }
+  // &__text {
+  //   font-weight: bold;
+  //   font-size: 15px;
+  //   line-height: 15px;
+  //   color: $primary-color;
+  //   @media (min-width: 481px) {
+  //     font-size: 16px;
+  //     line-height: 16px;
 }
