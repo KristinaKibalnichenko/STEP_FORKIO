@@ -1,6 +1,6 @@
 .forkpricing {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.0001);
+  background-color: #4a3b4e;
   &__title {
     font-weight: bold;
     font-size: 28px;
@@ -8,9 +8,6 @@
     text-align: center;
     color: $primary-color;
   }
-}
-
-.offers {
 }
 
 .offers-block {
