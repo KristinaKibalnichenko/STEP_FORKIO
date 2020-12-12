@@ -600,10 +600,11 @@ a {
   width: 100%;
   background-color: #4a3b4e;
   padding-bottom: 18px;
-  margin-top: 7px;
+  margin-top: 0;
 }
 
 .forkpricing__title {
+  margin: 0;
   font-weight: bold;
   font-size: 28px;
   line-height: 42px;
@@ -628,6 +629,7 @@ a {
 .forkpricing__title:before {
   content: "";
   display: inline-block;
+  text-align: center;
   position: absolute;
   width: 245px;
   border-top: 2px solid #645766;
@@ -704,7 +706,8 @@ a {
   padding: 30px 0 68px;
 }
 
-.offers-block__btn {
+.offers-block__btn,
+.offers-block-dark__btn {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.15)));
   background: -o-linear-gradient(rgba(255, 255, 255, 0.15));
   background: linear-gradient(rgba(255, 255, 255, 0.15));
@@ -714,7 +717,8 @@ a {
   margin: 0 auto;
 }
 
-.offers-block__btn__text {
+.offers-block__btn__text,
+.offers-block-dark__btn__text {
   font-weight: bold;
   font-size: 15px;
   line-height: 15px;
@@ -1014,12 +1018,14 @@ a {
     padding: 25px 7px 0;
   }
 
-  .offers-block__btn {
+  .offers-block__btn,
+  .offers-block-dark__btn {
     width: 145px;
     margin: 24px 10px 23px 0;
   }
 
-  .offers-block__btn__text {
+  .offers-block__btn__text,
+  .offers-block-dark__btn__text {
     font-size: 16px;
     line-height: 16px;
   }
@@ -1151,7 +1157,8 @@ a {
     padding-bottom: 111px;
   }
 
-  .offers-block__btn {
+  .offers-block__btn,
+  .offers-block-dark__btn {
     margin: 31px 30px 31px 0;
   }
 }
@@ -1170,7 +1177,8 @@ a {
     margin-left: 220px;
   }
 
-  .offers-block__btn {
+  .offers-block__btn,
+  .offers-block-dark__btn {
     margin-right: 55px;
   }
 }
@@ -1193,7 +1201,8 @@ a {
     margin-left: 245px;
   }
 
-  .offers-block__btn {
+  .offers-block__btn,
+  .offers-block-dark__btn {
     margin-right: 80px;
   }
 }
