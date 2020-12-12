@@ -68,8 +68,67 @@
     background-color: #F8F7F7;
     border-right: 1px solid #c9c5c5;
   }
-  &__text {
-    padding-left: 5px;
+  &__title {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: bold;
+    color: $nav-color;
+    padding: 42px 15px 47px;
+    @media (min-width: 481px) {
+      font-size: 42px;
+      line-height: 44px;
+    }
+    @media (min-width: 993px) {
+      font-size: 48px;
+      line-height: 50px;
+      order: 5;
+    }
+  }
+  &__title:before {
+    content: "\3C";
+  }
+  &__title:after {
+    content: "\3E";
+  }
+}
+
+// .advantage__title:before {
+//   content: "\3C";
+// }
+// .advantage__title:after {
+//   content: "\3E";
+// }
+
+// .advantage-post {
+// }
+.advantage-post__item {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  @media (min-width: 481px) {
+    flex-direction: row;
+  }
+  &:last-child {
+    position: relative;
+    @media (min-width: 993px) {
+    }
+  }
+}
+.post__block {
+  @media (min-width: 481px) {
+    min-width: 130px;
+  }
+}
+.post {
+  padding-top: 24px;
+  @media (min-width: 481px) {
+    padding: 0 14px 0 20px;
+    text-align: left;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 16px;
+    color: #323232;
   }
   &__second {
     display: flex;
