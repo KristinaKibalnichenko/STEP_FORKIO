@@ -1,12 +1,18 @@
 .forkpricing {
-  width: 100%;
+ width: 100%;
   background-color: #4a3b4e;
   padding-bottom: 18px;
-  margin-top: 0;
+  margin: 0;
   padding-top: 7px;
   position: relative;
   @media (min-width: 481px) {
-    background-image: url(../img/pricing_middle.webp);
+    background-image: url(../img/pricing-bg-middle.webp);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+  @media (min-width: 993px) {
+    background-image: url(../img/pricing-bg-big.webp);
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -18,8 +24,17 @@
     line-height: 42px;
     text-align: center;
     color: $primary-color;
-
     padding-top: 14px;
+    @media (min-width: 481px) {
+      font-size: 42px;
+      line-height: 44px;
+      padding-top: 88px;
+    }
+    @media (min-width: 993px) {
+      font-size: 48px;
+      line-height: 50px;
+      padding: 83px;
+    }
   }
   &__offers {
   }
@@ -35,6 +50,16 @@
   margin: 0 auto;
   top: 14px;
   left: calc((100vw - 245px) / 2);
+  @media (min-width: 481px) {
+    max-width: 555px;
+    width: calc((100vw - 91.5px) / 2);
+    top: 19.5px;
+  }
+  @media (min-width: 993px) {
+    max-width: 780px;
+    width: calc((100vw - 195px) / 2);
+    top: 18.5px;
+  }
 }
 
 .offers {
@@ -72,7 +97,6 @@
     text-transform: uppercase;
     padding: 0 36px;
     background: linear-gradient(rgba(255, 255, 255, 0.06));
-    width: 257px;
     height: 97px;
   }
   &__price {
@@ -91,11 +115,10 @@
 
   &__content {
     text-align: center;
-    width: 200px;
     height: 44px;
     font-size: 14px;
     line-height: 22px;
-    padding: 30px 0 68px;
+    padding: 30px 45px 68px 45px;
   }
 }
 .offers-block__btn,
