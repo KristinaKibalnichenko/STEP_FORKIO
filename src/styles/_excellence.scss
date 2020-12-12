@@ -1,9 +1,16 @@
-.advantage {
+.advantage-wrapper {
     background-color: $primary-color;
     @media (min-width: 993px) {
-        // display: flex;
-        // flex-direction: row;
         background-color: #F4F4F4;
+    }
+}
+
+.advantage {
+    // background-color: $primary-color;
+    @media (min-width: 993px) {
+        display: flex;
+        // flex-direction: row;
+        // background-color: #F4F4F4;
     }
     &__title {
         font-size: 32px;
@@ -37,14 +44,6 @@
             order: -1;
         //     float: left;
         // }
-    }
-}
-
-.adv-wrapper {
-    @media (min-width: 993px) {
-        display: flex;
-        // flex-direction: row;
-        // flex-wrap: wrap;
     }
 }
 
@@ -98,7 +97,7 @@
     }
 }
 
-.big__img {
+.advantage__big-img {
     margin-right: -10px;
     display: flex;
     justify-content: flex-end;
@@ -112,6 +111,6 @@
     // }
 }
 
-.big__img img {
+.advantage__big-img img {
     max-width: 100%;
 }
