@@ -2,18 +2,29 @@
   width: 100%;
   background-color: #4a3b4e;
   padding-bottom: 18px;
+  margin-top: 7px;
   &__title {
     font-weight: bold;
     font-size: 28px;
     line-height: 42px;
     text-align: center;
     color: $primary-color;
+    position: relative;
+    padding-top: 14px;
   }
   &__offers {
-    margin: 0 auto;
-    background: linear-gradient(rgba(255, 255, 255, 0.11));
-    width: 257px;
+    @include flex-center;
   }
+}
+
+.forkpricing__title:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 245px;
+  border-top: 2px solid#645766;
+  margin: 0 auto;
+  top: 14px;
 }
 
 .offers-block {
@@ -21,6 +32,10 @@
   flex-direction: column;
   color: $primary-color;
   padding-bottom: 67px;
+  margin: 0 auto;
+  background: linear-gradient(rgba(255, 255, 255, 0.11));
+  width: 257px;
+  margin-bottom: 18px;
   &__title {
     @include flex-center;
     font-size: 24px;
@@ -31,30 +46,29 @@
     width: 257px;
     height: 97px;
   }
-}
-&__price {
-  font-weight: bold;
-  font-size: 60px;
-  line-height: 62px;
-  margin: 30px 0 20px;
-}
-&__period {
-  font-size: 14px;
-  line-height: 16px;
-  text-transform: uppercase;
-  margin-bottom: 38px;
-  position: relative;
-}
+  &__price {
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 62px;
+    margin: 30px 0 20px;
+  }
+  &__period {
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+    position: relative;
+  }
 
-&__content {
-  text-align: center;
-  width: 200px;
-  height: 44px;
-  font-size: 14px;
-  line-height: 22px;
-  padding: 30px 0 68px;
+  &__content {
+    text-align: center;
+    width: 200px;
+    height: 44px;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 30px 0 68px;
+  }
 }
-
 .offers-block__btn {
   background: linear-gradient(rgba(255, 255, 255, 0.15));
   border-radius: 40px;
@@ -93,7 +107,8 @@
   text-transform: uppercase;
 }
 
-.offers-block__period:after {
+.offers-block__period:after,
+.offers-block-dark__period:after {
   content: "";
   display: block;
   text-align: center;
@@ -105,19 +120,14 @@
   left: 15px;
 }
 
-.offers-block__btn {
-  background: rgba(133, 125, 138, 0.6);
-  border-radius: 40px;
-  padding: 15px 0;
-  width: 163px;
-  margin: 47px 0 47px;
-}
-
 .offers-block-dark {
   @include flex-center;
   flex-direction: column;
   color: $primary-color;
+  background: #463048;
   padding-bottom: 67px;
+  margin-bottom: 18px;
+  width: 299px;
   &__title {
     @include flex-center;
     font-size: 24px;
@@ -125,7 +135,7 @@
     text-transform: uppercase;
     padding: 0 36px;
     background: linear-gradient(rgba(0, 0, 0, 0.11));
-    width: 257px;
+    width: 299px;
     height: 97px;
   }
   &__price {
