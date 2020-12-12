@@ -601,6 +601,8 @@ a {
   background-color: #4a3b4e;
   padding-bottom: 18px;
   margin-top: 0;
+  padding-top: 7px;
+  position: relative;
 }
 
 .forkpricing__title {
@@ -610,23 +612,10 @@ a {
   line-height: 42px;
   text-align: center;
   color: #ffffff;
-  position: relative;
   padding-top: 14px;
 }
 
-.forkpricing__offers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.forkpricing__title:before {
+.forkpricing:before {
   content: "";
   display: inline-block;
   text-align: center;
@@ -635,6 +624,15 @@ a {
   border-top: 2px solid #645766;
   margin: 0 auto;
   top: 14px;
+  left: calc((100vw - 245px) / 2);
+}
+
+.offers {
+  display: grid;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  justify-items: center;
+  grid-template-columns: 1fr;
 }
 
 .offers-block {
@@ -1018,6 +1016,26 @@ a {
     padding: 25px 7px 0;
   }
 
+  .forkpricing {
+    background-image: url(../img/pricing_middle.webp);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+
+  .offers {
+    grid-template-columns: 45% 45%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+
+  .offers-block {
+    max-width: 257px;
+    margin: 0 12.5px 0 12.5px;
+  }
+
   .offers-block__btn,
   .offers-block-dark__btn {
     width: 145px;
@@ -1155,6 +1173,13 @@ a {
 
   .brand-wrapper {
     padding-bottom: 111px;
+  }
+
+  .offers {
+    grid-template-columns: 23% 23% 23% 23%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .offers-block__btn,
