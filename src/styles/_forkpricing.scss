@@ -3,6 +3,14 @@
   background-color: #4a3b4e;
   padding-bottom: 18px;
   margin-top: 0;
+  padding-top: 7px;
+  position: relative;
+  @media (min-width: 481px) {
+    background-image: url(../img/pricing_middle.webp);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
   &__title {
     margin: 0;
     font-weight: bold;
@@ -10,17 +18,14 @@
     line-height: 42px;
     text-align: center;
     color: $primary-color;
-    position: relative;
+
     padding-top: 14px;
   }
   &__offers {
-    @include flex-center;
-  }
-  @media (min-width: 481px) {
   }
 }
 
-.forkpricing__title:before {
+.forkpricing:before {
   content: "";
   display: inline-block;
   text-align: center;
@@ -29,8 +34,24 @@
   border-top: 2px solid#645766;
   margin: 0 auto;
   top: 14px;
+  left: calc((100vw - 245px) / 2);
 }
 
+.offers {
+  display: grid;
+  flex-wrap: wrap;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  @media (min-width: 481px) {
+    grid-template-columns: 45% 45%;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  @media (min-width: 993px) {
+    grid-template-columns: 23% 23% 23% 23%;
+    justify-content: center;
+  }
+}
 .offers-block {
   @include flex-center;
   flex-direction: column;
@@ -40,6 +61,10 @@
   background: linear-gradient(rgba(255, 255, 255, 0.11));
   width: 257px;
   margin-bottom: 18px;
+  @media (min-width: 481px) {
+    max-width: 257px;
+    margin: 0 12.5px 0 12.5px;
+  }
   &__title {
     @include flex-center;
     font-size: 24px;
