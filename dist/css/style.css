@@ -493,6 +493,16 @@ a {
   background-repeat: no-repeat;
 }
 
+.forktalking__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: center;
+  color: #ffffff;
+  padding: 57px 0 53px;
+  margin: 0 auto;
+}
+
 .forktalking__brands {
   display: grid;
   -ms-flex-wrap: wrap;
@@ -501,7 +511,7 @@ a {
   grid-template-columns: 1fr;
 }
 
-.forktalking__brands__content {
+.forktalking__content {
   max-width: 887px;
   font-family: 'Lato', sans-serif;
   font-size: 14px;
@@ -525,7 +535,7 @@ a {
 }
 
 .brand__text {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   font-style: italic;
   font-weight: bold;
   font-size: 16px;
@@ -942,6 +952,10 @@ a {
   }
 
   .forktalking {
+    background-image: url(../img/forktalking-bg-m.webp);
+  }
+
+  .forktalking__title {
     padding: 87px 0 88px;
     font-size: 42px;
     line-height: 44px;
@@ -954,12 +968,8 @@ a {
             justify-content: space-between;
   }
 
-  .forktalking__brands__content {
+  .forktalking__content {
     padding: 22px 20px 11.5px;
-  }
-
-  .forktalking__brands {
-    padding: 7px 20px 3.5px;
   }
 
   .brand__img {
@@ -1135,6 +1145,10 @@ a {
   }
 
   .forktalking {
+    background-image: url(../img/forktalking-bg-l.webp);
+  }
+
+  .forktalking__title {
     padding: 108px 0 82px;
     font-size: 48px;
     line-height: 50px;
@@ -1146,7 +1160,7 @@ a {
         justify-content: space-around;
   }
 
-  .forktalking__brands__content {
+  .forktalking__content {
     padding: 7px 20px 3.5px;
   }
 
