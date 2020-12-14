@@ -1,9 +1,5 @@
 .idea/
 
-.dist/
-
-index.html
-
 package-lock.json
 
 node_modules
